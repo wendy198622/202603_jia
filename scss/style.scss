@@ -427,6 +427,9 @@ section{
             font-size: 18px;
             font-weight: 300;
             letter-spacing: 1px;
+            @media (min-width: 960px){
+                width: 480px;
+            }
         }
         .checkbox-group {
             width: 90%;
@@ -435,14 +438,17 @@ section{
             flex-direction: row; /* 水平排列 checkbox 和 label */
             align-items: center;
             gap: 10px;
-            padding: 12px 0;
+            padding: 12px 0 12px 8px;
             position: relative;
+            @media (min-width: 960px){
+                width: 470px;
+            }
 
             input[type="checkbox"]{
                 width: 20px;
                 height: 20px;
                 background: #fff;
-                margin-right: 10px;
+                margin-right: 0px;
                 outline: 0;
                 // display: inline-block;
                 // vertical-align: middle;

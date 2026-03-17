@@ -616,6 +616,12 @@ section .theme6 .form-notice {
   letter-spacing: 1px;
 }
 
+@media (min-width: 960px) {
+  section .theme6 .form-notice {
+    width: 480px;
+  }
+}
+
 section .theme6 .checkbox-group {
   width: 90%;
   margin: 10px auto;
@@ -631,15 +637,21 @@ section .theme6 .checkbox-group {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
-  padding: 12px 0;
+  padding: 12px 0 12px 8px;
   position: relative;
+}
+
+@media (min-width: 960px) {
+  section .theme6 .checkbox-group {
+    width: 470px;
+  }
 }
 
 section .theme6 .checkbox-group input[type="checkbox"] {
   width: 20px;
   height: 20px;
   background: #fff;
-  margin-right: 10px;
+  margin-right: 0px;
   outline: 0;
   padding: 0;
 }
