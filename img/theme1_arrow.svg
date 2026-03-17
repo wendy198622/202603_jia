@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_1" data-name="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 995 172">
+  <!-- Generator: Adobe Illustrator 29.4.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 152)  -->
+  <defs>
+    <style>
+      .st0, .st1 {
+        fill: none;
+      }
+
+      .st1 {
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+
+      .st2 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="st0" x="467.5" width="59.7" height="172"/>
+    </clipPath>
+  </defs>
+  <g class="st2">
+    <g>
+      <path class="st1" d="M497.3,171.5c16.2,0,29.3-13.1,29.3-29.3s-13.1-29.3-29.3-29.3-29.3,13.1-29.3,29.3,13.1,29.3,29.3,29.3Z"/>
+      <path class="st1" d="M497.3,0v149.2l-13-13"/>
+    </g>
+  </g>
+</svg>

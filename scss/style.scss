@@ -1,0 +1,636 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;500&family=Noto+Serif+TC:wght@300;400;500;600;700;900&display=swap');
+
+// setting
+*{ box-sizing: border-box;}
+img{
+    width: 100%;
+    display: block;
+}
+.pc{ display: block !important;}
+.mob{ display: none !important;}
+
+@media (max-width:800px) {
+    .pc{ display: none !important;}
+    .mob{ display: block !important;}
+}
+
+body {
+    font-family: 'Noto Sans TC', serif;
+    // background: #F5F1EE;
+}
+
+i.material-icons{
+    @font-face {
+        font-family: 'Material Icons';
+        font-style: normal;
+        font-weight: 400;
+        src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+        src: local('Material Icons'),
+          local('MaterialIcons-Regular'),
+          url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+          url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+          url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+      }
+}
+.fixed_area{
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    background: #3E3A39;
+    ul{
+        overflow: hidden;
+        max-width: 1520px;
+        height: 72px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;  
+        @media (max-width:800px) {
+            max-width: 100%;
+            height: auto;
+            padding: 10px 0;
+        }      
+        li{
+            width: calc((100% - 3px) / 4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:last-child{
+                margin-right: 0;
+            }
+            a{
+                width: 100%;
+                color: #fff;
+                line-height: 2.4;
+                display: flex;
+                justify-content: center;
+                img{
+                    width: auto;
+                    height: 42px;
+                    @media (max-width:800px) {
+                        width: 60%;
+                        height: auto;
+                    }      
+                }
+            }
+        }
+        li + li{
+            position: relative;
+            &::before{
+                content: "";
+                width: 1px;
+                height: 60%;
+                position: absolute;
+                top: 20%;
+                left: 0;
+                background: #C7B299;
+            }
+        }
+    }
+}
+section{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    .theme{
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-position: center center;
+        &.theme1{ background-image: url(../img/theme1_bg.jpg);}
+        &.theme2{ background-image: url(../img/theme2_bg.jpg);}
+        &.theme3{ background-image: url(../img/theme3_bg.jpg);}
+        &.theme4{ background-image: url(../img/theme4_bg.jpg);}
+        &.theme5{ background-image: url(../img/theme5_bg.jpg);}
+        &.theme6{ background-image: url(../img/theme6_bg.jpg);}
+
+        @media (max-width: 960px) {
+            height: 0;
+            &.theme1{ background-image: url(../img/theme1_bg_mob.jpg); padding-bottom: calc(1696 / 1080 * 100%);}
+            &.theme2{ background-image: url(../img/theme2_bg_mob.jpg); padding-bottom: calc(1696 / 1080 * 100%);}
+            &.theme3{ background-image: url(../img/theme3_bg_mob.jpg); padding-bottom: calc(1706 / 1080 * 100%);}
+            &.theme4{ background-image: url(../img/theme4_bg_mob.jpg); padding-bottom: calc(1448 / 1080 * 100%);}
+            &.theme5{ background-image: url(../img/theme5_bg_mob.jpg); padding-bottom: calc(1954 / 1080 * 100%);}
+            &.theme6{ background-image: url(../img/theme6_bg_mob.jpg);}
+        }
+
+    }
+    .theme{
+        position: relative;
+        .container{
+            width: calc(600 / 1080 * 100%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            @media (max-width: 960px){
+                width: calc(995 / 1080 * 100%);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+        }
+    }
+    .theme1{
+        .theme1_line{}
+        .theme1_txt1{}
+        .theme1_txt2{
+            margin-top: calc(175 / 1080 * 100%);
+            margin-bottom: calc(290 / 1080 * 100%);
+            @media (min-width: 960px){
+                margin-top: calc(80 / 1080 * 100%);
+                margin-bottom: calc(160 / 1080 * 100%);
+            }
+        }
+        .theme1_txt3{
+            margin-top: calc(120 / 1080 * 100%);
+            @media (min-width: 960px){
+                margin-top: calc(60 / 1080 * 100%);
+            }
+        }
+    }
+    .theme2{
+        @media (min-width: 960px){
+            .container{
+                width: calc(600 / 1080 * 100%);
+                position: absolute;
+                top: 50%;
+                left: auto;
+                right: 5%;
+                transform: translate(0%,-50%);
+            }
+        }
+        .theme2_txt1{}
+        .theme2_txt2{
+            margin-top: calc(72 / 1080 * 100%);
+            margin-bottom: calc(1240 / 1080 * 100%);
+            @media (min-width: 960px){
+                margin-top: calc(80 / 1080 * 100%);
+                margin-bottom: calc(300 / 1080 * 100%);
+            }
+        }
+        .theme2_txt3{}
+    }
+    .theme3{
+        .container{
+            width: 100%;
+        }
+        .theme3_arrow{
+            margin-top: calc(200 / 1080 * 100%);
+            @media (min-width: 960px){
+                width: 50%;
+                margin: 0 auto;
+            }
+        }
+        .theme3_txt1{
+            margin-top: calc(120 / 1080 * 100%);
+            margin-bottom: calc(160 / 1080 * 100%);
+            @media (min-width: 960px){
+                width: 60%;
+                margin: 40px auto;
+            }
+        }
+        .photo_wall{
+            width: 100%;
+            .theme3_photo{
+                width: 100%;
+                position: relative;
+                @media (min-width: 960px){
+                    padding: 0 100px;
+                    text-align: center;
+                }
+                .theme3_photonote{
+                    width: 25%;
+                    position: absolute;
+                    right: 10px;
+                    bottom: 20px;
+                    @media (min-width: 960px){
+                        right: 120px;
+                        width: 200px;
+                    }
+                }
+                .theme3_phototxt{
+                    width: 80%;
+                    margin-left: 10%;
+                    @media (min-width: 960px){
+                        width: calc((100% - 8px) / 2);
+                        // height: 0;
+                        // padding-bottom: 31.5%;
+                        display: inline-block;
+                        margin: 0;
+                    }
+                }
+                .theme3_photoimg{
+                    // width: 100%;
+                    margin-top: -34%;
+                    // display: none;
+                    @media (min-width: 960px){
+                        margin-top: 0;
+                        width: calc((100% - 8px) / 2);
+                        display: inline-block;
+                        
+                    }
+                }
+            }
+        }
+    }
+    .theme4{
+        .theme4_arrow{
+            margin-top: calc(200 / 1080 * 100%);
+            @media (min-width: 960px){
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+        .theme4_txt1{
+            margin-top: calc(120 / 1080 * 100%);
+            margin-bottom: calc(160 / 1080 * 100%);
+            @media (min-width: 960px){
+                margin-top: calc(40 / 1080 * 100%);
+                margin-bottom: calc(100 / 1080 * 100%);
+            }
+        }
+        .theme4_txt2{}
+        .theme4_txt3{
+            margin-top: calc(100 / 1080 * 100%);
+            margin-bottom: calc(380 / 1080 * 100%);
+            @media (min-width: 960px){
+                margin-top: calc(60 / 1080 * 100%);
+                margin-bottom: 0;
+            }
+        }
+    }
+    .theme5{
+        .theme5_line{
+            @media (min-width: 960px){
+                display: none;
+            }
+        }
+        .theme5_txt1{
+            margin-top: calc(120 / 1080 * 100%);
+            margin-bottom: calc(180 / 1080 * 100%);
+            @media (min-width: 960px){
+                margin-top: 0;
+                margin-bottom: calc(720 / 1080 * 100%);
+            }
+        }
+        .theme5_txt2{
+            @media (min-width: 960px){
+                display: none;
+            }
+        }
+        .theme5_txt3{
+            margin-top: calc(140 / 1080 * 100%);
+            margin-bottom: calc(800 / 1080 * 100%);
+            @media (min-width: 960px){
+                display: none;
+            }
+        }
+    }
+    .theme6{
+        height: auto;
+        .container{
+            position: relative;
+            top: auto;
+            right: auto;
+            bottom: auto;
+            left: auto;
+            transform: translate(0);
+            padding: 60px 0;
+            margin: 0 auto;
+        }
+        @media (min-width: 960px){
+            
+        }
+        .theme6_txt1{
+            margin-bottom: calc(60 / 1080 * 100%);
+        }
+        /* 表單容器背景 */
+        .custom-form-container {
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+
+            /* 每一行使用 Flexbox */
+            .form-row {
+                display: flex;
+                gap: 10px; /* 元素之間的間距 */
+                margin-bottom: 12px;
+            }
+
+            /* 基礎輸入框樣式 */
+            .input-field, .select-field, .textarea-field, .gender-group, .captcha-box {
+                background-color: #ffffff;
+                border: none;
+                outline: none;
+                padding: 10px 15px;
+                font-size: 16px;
+                color: #68A5D8; /* 圖片中的淡藍色文字 */
+                box-sizing: border-box;
+            }
+    
+            /* 讓寬度撐滿 */
+            .input-field, .select-field, .textarea-field {
+                width: 100%;
+            }
+    
+            /* 比例分配 */
+            .flex-1 { flex: 1; }
+            .flex-2 { flex: 2; }
+            .flex-3 { flex: 3; }
+    
+            /* 性別選擇區塊 */
+            .gender-group {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                color: #0055a5; /* 性別文字用藍色 */
+                min-width: 150px;
+            }
+    
+            .gender-group label {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                font-size: 15px;
+            }
+    
+            .gender-group input {
+                margin-right: 5px;
+            }
+    
+            /* 下拉選單外觀 */
+            .select-field {
+                appearance: none;
+                background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="%2388c4eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+                background-repeat: no-repeat;
+                background-position: right 15px center;
+                background-size: 15px;
+            }
+    
+            /* 留言板高度 */
+            .textarea-field {
+                height: 120px;
+                resize: none;
+            }
+    
+            /* 驗證碼區塊 */
+            .captcha-box {
+                background-color: #88e2ff; /* 淺藍色預留位置 */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                color: #0055a5;
+                cursor: pointer;
+            }
+    
+            /* Placeholder 顏色還原 */
+            ::placeholder {
+                color: #68A5D8;
+                opacity: 1;
+            }
+    
+            /* 手機版調整 */
+            @media (max-width: 480px) {
+                .form-row {
+                    // flex-direction: column; /* 手機上變為垂直排列 */
+                    gap: 8px;
+                }
+                .gender-group {
+                    width: 100%;
+                    padding: 12px;
+                }
+            }
+        }
+        .theme6_txt2{
+            margin-bottom: calc(40 / 1080 * 100%);
+        }
+        button{
+            background: none;
+            box-shadow: none;
+            border: 0;
+            &:hover{
+                opacity: .9;
+                cursor: pointer;
+            }
+        }
+        .form-notice {
+            width: 90%;
+            margin: 10px auto;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        .checkbox-group {
+            width: 90%;
+            margin: 10px auto;
+            display: flex;
+            flex-direction: row; /* 水平排列 checkbox 和 label */
+            align-items: center;
+            gap: 10px;
+            padding: 12px 0;
+            position: relative;
+
+            input[type="checkbox"]{
+                width: 20px;
+                height: 20px;
+                background: #fff;
+                margin-right: 10px;
+                outline: 0;
+                // display: inline-block;
+                // vertical-align: middle;
+                padding: 0;
+            }
+            label{
+                // width: 100px;
+                // margin-top: 10px;
+                // margin-bottom: 20px;
+                // display: inline-block;
+                // vertical-align: middle;
+                font-size: 18px;
+                font-weight: 300;
+                letter-spacing: 1px;
+                color: #fff;
+                width: 100%;
+                text-align: justify;               
+            }
+            // input[type="checkbox"]:checked{
+            //     outline: 0;
+            //     bottom: 0;
+            //     &:after{
+            //         width: 20px;
+            //         height: 20px;
+            //         content: "";
+            //         background: url(../img/check.svg) 0 0 no-repeat #fff;
+            //         position: absolute;
+            //         z-index: 3;
+            //         top: 15px;
+            //         left: 0;
+
+            //     }
+            // }
+        }
+    }
+    
+}
+
+/* 彈窗底層：預設隱藏 */
+.popup {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000; /* 確保在最上層 */
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;           /* 使用 flex 讓內容置中 */
+    align-items: center;     /* 垂直置中 */
+    justify-content: center;  /* 水平置中 */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* 當 Vue 加上 is_acted 時：顯示出來 */
+/* 注意：這段不能寫在 .popup 裡面，必須分開寫 */
+.popup.is_acted {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* 彈窗內的訊息盒 */
+.popup_message {
+    background-color: #ffffff;
+    color: #333333;
+    padding: 30px 50px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    text-align: center;
+    min-width: 280px;
+    position: relative; /* 確保不被其他定位干擾 */
+}
+
+.privacy_theme{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #000;
+    h2{
+        text-align: center;
+        font-size: 36px;
+        margin: 40px;
+    }
+    h3{
+        font-size: 24px;
+        margin-top: 40px;
+    }
+    p{
+        text-align: justify;
+        font-size: 20px;
+        margin-top: 20px;
+        color: rgba(120,120,120,1);
+    }
+}
+.slick-prev{
+    left: 20px;
+    top: 66%;
+    z-index: 100;
+    &:before{
+        display: none;
+    }
+    @media (min-width: 960px){
+        top: 50%;
+        width: 40px;
+    }
+}
+.slick-next{
+    right: 20px;
+    top: 66%;
+    z-index: 100;
+    &:before{
+        display: none;
+    }
+    @media (min-width: 960px){
+        top: 50%;
+        width: 40px;
+    }
+}
+
+.captcha-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 5px;
+}
+
+#captchaCanvas {
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+.refresh-btn {
+    background: #e0e0e0;
+    border: 1px solid #999;
+    color: #333;
+    font-size: 12px;
+    margin-top: 3px;
+    padding: 2px 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.refresh-btn:hover {
+    background: #ccc;
+}
+
+/* 驗證碼容器佈局 */
+.captcha-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    padding: 5px;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+#captchaCanvas {
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #ccc;
+    max-width: 100px;
+}
+
+.refresh-btn {
+    background: #e0e0e0;
+    border: 1px solid #999;
+    color: #333;
+    font-size: 11px;
+    margin-top: 3px;
+    padding: 2px 4px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* 確保送出按鈕是可以被點擊的 */
+.submit-button {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    display: block;
+    margin: 20px auto;
+    width: 100%;
+}

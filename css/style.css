@@ -1,0 +1,851 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;500&family=Noto+Serif+TC:wght@300;400;500;600;700;900&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.pc {
+  display: block !important;
+}
+
+.mob {
+  display: none !important;
+}
+
+@media (max-width: 800px) {
+  .pc {
+    display: none !important;
+  }
+  .mob {
+    display: block !important;
+  }
+}
+
+body {
+  font-family: 'Noto Sans TC', serif;
+}
+
+@font-face {
+  i.material-icons {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot);
+    /* For IE6-8 */
+    src: local("Material Icons"), local("MaterialIcons-Regular"), url(https://example.com/MaterialIcons-Regular.woff2) format("woff2"), url(https://example.com/MaterialIcons-Regular.woff) format("woff"), url(https://example.com/MaterialIcons-Regular.ttf) format("truetype");
+  }
+}
+
+.fixed_area {
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  background: #3E3A39;
+}
+
+.fixed_area ul {
+  overflow: hidden;
+  max-width: 1520px;
+  height: 72px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+  .fixed_area ul {
+    max-width: 100%;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+
+.fixed_area ul li {
+  width: calc((100% - 3px) / 4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.fixed_area ul li:last-child {
+  margin-right: 0;
+}
+
+.fixed_area ul li a {
+  width: 100%;
+  color: #fff;
+  line-height: 2.4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.fixed_area ul li a img {
+  width: auto;
+  height: 42px;
+}
+
+@media (max-width: 800px) {
+  .fixed_area ul li a img {
+    width: 60%;
+    height: auto;
+  }
+}
+
+.fixed_area ul li + li {
+  position: relative;
+}
+
+.fixed_area ul li + li::before {
+  content: "";
+  width: 1px;
+  height: 60%;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  background: #C7B299;
+}
+
+section {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+section .theme {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+}
+
+section .theme.theme1 {
+  background-image: url(../img/theme1_bg.jpg);
+}
+
+section .theme.theme2 {
+  background-image: url(../img/theme2_bg.jpg);
+}
+
+section .theme.theme3 {
+  background-image: url(../img/theme3_bg.jpg);
+}
+
+section .theme.theme4 {
+  background-image: url(../img/theme4_bg.jpg);
+}
+
+section .theme.theme5 {
+  background-image: url(../img/theme5_bg.jpg);
+}
+
+section .theme.theme6 {
+  background-image: url(../img/theme6_bg.jpg);
+}
+
+@media (max-width: 960px) {
+  section .theme {
+    height: 0;
+  }
+  section .theme.theme1 {
+    background-image: url(../img/theme1_bg_mob.jpg);
+    padding-bottom: calc(1696 / 1080 * 100%);
+  }
+  section .theme.theme2 {
+    background-image: url(../img/theme2_bg_mob.jpg);
+    padding-bottom: calc(1696 / 1080 * 100%);
+  }
+  section .theme.theme3 {
+    background-image: url(../img/theme3_bg_mob.jpg);
+    padding-bottom: calc(1706 / 1080 * 100%);
+  }
+  section .theme.theme4 {
+    background-image: url(../img/theme4_bg_mob.jpg);
+    padding-bottom: calc(1448 / 1080 * 100%);
+  }
+  section .theme.theme5 {
+    background-image: url(../img/theme5_bg_mob.jpg);
+    padding-bottom: calc(1954 / 1080 * 100%);
+  }
+  section .theme.theme6 {
+    background-image: url(../img/theme6_bg_mob.jpg);
+  }
+}
+
+section .theme {
+  position: relative;
+}
+
+section .theme .container {
+  width: calc(600 / 1080 * 100%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media (max-width: 960px) {
+  section .theme .container {
+    width: calc(995 / 1080 * 100%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+section .theme1 .theme1_txt2 {
+  margin-top: calc(175 / 1080 * 100%);
+  margin-bottom: calc(290 / 1080 * 100%);
+}
+
+@media (min-width: 960px) {
+  section .theme1 .theme1_txt2 {
+    margin-top: calc(80 / 1080 * 100%);
+    margin-bottom: calc(160 / 1080 * 100%);
+  }
+}
+
+section .theme1 .theme1_txt3 {
+  margin-top: calc(120 / 1080 * 100%);
+}
+
+@media (min-width: 960px) {
+  section .theme1 .theme1_txt3 {
+    margin-top: calc(60 / 1080 * 100%);
+  }
+}
+
+@media (min-width: 960px) {
+  section .theme2 .container {
+    width: calc(600 / 1080 * 100%);
+    position: absolute;
+    top: 50%;
+    left: auto;
+    right: 5%;
+    -webkit-transform: translate(0%, -50%);
+            transform: translate(0%, -50%);
+  }
+}
+
+section .theme2 .theme2_txt2 {
+  margin-top: calc(72 / 1080 * 100%);
+  margin-bottom: calc(1240 / 1080 * 100%);
+}
+
+@media (min-width: 960px) {
+  section .theme2 .theme2_txt2 {
+    margin-top: calc(80 / 1080 * 100%);
+    margin-bottom: calc(300 / 1080 * 100%);
+  }
+}
+
+section .theme3 .container {
+  width: 100%;
+}
+
+section .theme3 .theme3_arrow {
+  margin-top: calc(200 / 1080 * 100%);
+}
+
+@media (min-width: 960px) {
+  section .theme3 .theme3_arrow {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+section .theme3 .theme3_txt1 {
+  margin-top: calc(120 / 1080 * 100%);
+  margin-bottom: calc(160 / 1080 * 100%);
+}
+
+@media (min-width: 960px) {
+  section .theme3 .theme3_txt1 {
+    width: 60%;
+    margin: 40px auto;
+  }
+}
+
+section .theme3 .photo_wall {
+  width: 100%;
+}
+
+section .theme3 .photo_wall .theme3_photo {
+  width: 100%;
+  position: relative;
+}
+
+@media (min-width: 960px) {
+  section .theme3 .photo_wall .theme3_photo {
+    padding: 0 100px;
+    text-align: center;
+  }
+}
+
+section .theme3 .photo_wall .theme3_photo .theme3_photonote {
+  width: 25%;
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+}
+
+@media (min-width: 960px) {
+  section .theme3 .photo_wall .theme3_photo .theme3_photonote {
+    right: 120px;
+    width: 200px;
+  }
+}
+
+section .theme3 .photo_wall .theme3_photo .theme3_phototxt {
+  width: 80%;
+  margin-left: 10%;
+}
+
+@media (min-width: 960px) {
+  section .theme3 .photo_wall .theme3_photo .theme3_phototxt {
+    width: calc((100% - 8px) / 2);
+    display: inline-block;
+    margin: 0;
+  }
+}
+
+section .theme3 .photo_wall .theme3_photo .theme3_photoimg {
+  margin-top: -34%;
+}
+
+@media (min-width: 960px) {
+  section .theme3 .photo_wall .theme3_photo .theme3_photoimg {
+    margin-top: 0;
+    width: calc((100% - 8px) / 2);
+    display: inline-block;
+  }
+}
+
+section .theme4 .theme4_arrow {
+  margin-top: calc(200 / 1080 * 100%);
+}
+
+@media (min-width: 960px) {
+  section .theme4 .theme4_arrow {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+section .theme4 .theme4_txt1 {
+  margin-top: calc(120 / 1080 * 100%);
+  margin-bottom: calc(160 / 1080 * 100%);
+}
+
+@media (min-width: 960px) {
+  section .theme4 .theme4_txt1 {
+    margin-top: calc(40 / 1080 * 100%);
+    margin-bottom: calc(100 / 1080 * 100%);
+  }
+}
+
+section .theme4 .theme4_txt3 {
+  margin-top: calc(100 / 1080 * 100%);
+  margin-bottom: calc(380 / 1080 * 100%);
+}
+
+@media (min-width: 960px) {
+  section .theme4 .theme4_txt3 {
+    margin-top: calc(60 / 1080 * 100%);
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 960px) {
+  section .theme5 .theme5_line {
+    display: none;
+  }
+}
+
+section .theme5 .theme5_txt1 {
+  margin-top: calc(120 / 1080 * 100%);
+  margin-bottom: calc(180 / 1080 * 100%);
+}
+
+@media (min-width: 960px) {
+  section .theme5 .theme5_txt1 {
+    margin-top: 0;
+    margin-bottom: calc(720 / 1080 * 100%);
+  }
+}
+
+@media (min-width: 960px) {
+  section .theme5 .theme5_txt2 {
+    display: none;
+  }
+}
+
+section .theme5 .theme5_txt3 {
+  margin-top: calc(140 / 1080 * 100%);
+  margin-bottom: calc(800 / 1080 * 100%);
+}
+
+@media (min-width: 960px) {
+  section .theme5 .theme5_txt3 {
+    display: none;
+  }
+}
+
+section .theme6 {
+  height: auto;
+  /* 表單容器背景 */
+}
+
+section .theme6 .container {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  padding: 60px 0;
+  margin: 0 auto;
+}
+
+section .theme6 .theme6_txt1 {
+  margin-bottom: calc(60 / 1080 * 100%);
+}
+
+section .theme6 .custom-form-container {
+  padding: 20px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 每一行使用 Flexbox */
+  /* 基礎輸入框樣式 */
+  /* 讓寬度撐滿 */
+  /* 比例分配 */
+  /* 性別選擇區塊 */
+  /* 下拉選單外觀 */
+  /* 留言板高度 */
+  /* 驗證碼區塊 */
+  /* Placeholder 顏色還原 */
+  /* 手機版調整 */
+}
+
+section .theme6 .custom-form-container .form-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  /* 元素之間的間距 */
+  margin-bottom: 12px;
+}
+
+section .theme6 .custom-form-container .input-field, section .theme6 .custom-form-container .select-field, section .theme6 .custom-form-container .textarea-field, section .theme6 .custom-form-container .gender-group, section .theme6 .custom-form-container .captcha-box {
+  background-color: #ffffff;
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #68A5D8;
+  /* 圖片中的淡藍色文字 */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+section .theme6 .custom-form-container .input-field, section .theme6 .custom-form-container .select-field, section .theme6 .custom-form-container .textarea-field {
+  width: 100%;
+}
+
+section .theme6 .custom-form-container .flex-1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+section .theme6 .custom-form-container .flex-2 {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+section .theme6 .custom-form-container .flex-3 {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+
+section .theme6 .custom-form-container .gender-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: #0055a5;
+  /* 性別文字用藍色 */
+  min-width: 150px;
+}
+
+section .theme6 .custom-form-container .gender-group label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+section .theme6 .custom-form-container .gender-group input {
+  margin-right: 5px;
+}
+
+section .theme6 .custom-form-container .select-field {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="%2388c4eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 15px;
+}
+
+section .theme6 .custom-form-container .textarea-field {
+  height: 120px;
+  resize: none;
+}
+
+section .theme6 .custom-form-container .captcha-box {
+  background-color: #88e2ff;
+  /* 淺藍色預留位置 */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: bold;
+  color: #0055a5;
+  cursor: pointer;
+}
+
+section .theme6 .custom-form-container ::-webkit-input-placeholder {
+  color: #68A5D8;
+  opacity: 1;
+}
+
+section .theme6 .custom-form-container :-ms-input-placeholder {
+  color: #68A5D8;
+  opacity: 1;
+}
+
+section .theme6 .custom-form-container ::-ms-input-placeholder {
+  color: #68A5D8;
+  opacity: 1;
+}
+
+section .theme6 .custom-form-container ::placeholder {
+  color: #68A5D8;
+  opacity: 1;
+}
+
+@media (max-width: 480px) {
+  section .theme6 .custom-form-container .form-row {
+    gap: 8px;
+  }
+  section .theme6 .custom-form-container .gender-group {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+section .theme6 .theme6_txt2 {
+  margin-bottom: calc(40 / 1080 * 100%);
+}
+
+section .theme6 button {
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 0;
+}
+
+section .theme6 button:hover {
+  opacity: .9;
+  cursor: pointer;
+}
+
+section .theme6 .form-notice {
+  width: 90%;
+  margin: 10px auto;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+section .theme6 .checkbox-group {
+  width: 90%;
+  margin: 10px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  /* 水平排列 checkbox 和 label */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  padding: 12px 0;
+  position: relative;
+}
+
+section .theme6 .checkbox-group input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  margin-right: 10px;
+  outline: 0;
+  padding: 0;
+}
+
+section .theme6 .checkbox-group label {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #fff;
+  width: 100%;
+  text-align: justify;
+}
+
+/* 彈窗底層：預設隱藏 */
+.popup {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  /* 確保在最上層 */
+  background-color: rgba(0, 0, 0, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* 使用 flex 讓內容置中 */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* 垂直置中 */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* 水平置中 */
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s, visibility 0.3s;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* 當 Vue 加上 is_acted 時：顯示出來 */
+/* 注意：這段不能寫在 .popup 裡面，必須分開寫 */
+.popup.is_acted {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* 彈窗內的訊息盒 */
+.popup_message {
+  background-color: #ffffff;
+  color: #333333;
+  padding: 30px 50px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  min-width: 280px;
+  position: relative;
+  /* 確保不被其他定位干擾 */
+}
+
+.privacy_theme {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #000;
+}
+
+.privacy_theme h2 {
+  text-align: center;
+  font-size: 36px;
+  margin: 40px;
+}
+
+.privacy_theme h3 {
+  font-size: 24px;
+  margin-top: 40px;
+}
+
+.privacy_theme p {
+  text-align: justify;
+  font-size: 20px;
+  margin-top: 20px;
+  color: #787878;
+}
+
+.slick-prev {
+  left: 20px;
+  top: 66%;
+  z-index: 100;
+}
+
+.slick-prev:before {
+  display: none;
+}
+
+@media (min-width: 960px) {
+  .slick-prev {
+    top: 50%;
+    width: 40px;
+  }
+}
+
+.slick-next {
+  right: 20px;
+  top: 66%;
+  z-index: 100;
+}
+
+.slick-next:before {
+  display: none;
+}
+
+@media (min-width: 960px) {
+  .slick-next {
+    top: 50%;
+    width: 40px;
+  }
+}
+
+.captcha-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f0f0f0;
+  padding: 5px;
+}
+
+#captchaCanvas {
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+.refresh-btn {
+  background: #e0e0e0;
+  border: 1px solid #999;
+  color: #333;
+  font-size: 12px;
+  margin-top: 3px;
+  padding: 2px 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.refresh-btn:hover {
+  background: #ccc;
+}
+
+/* 驗證碼容器佈局 */
+.captcha-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f0f0f0;
+  padding: 5px;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+#captchaCanvas {
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #ccc;
+  max-width: 100px;
+}
+
+.refresh-btn {
+  background: #e0e0e0;
+  border: 1px solid #999;
+  color: #333;
+  font-size: 11px;
+  margin-top: 3px;
+  padding: 2px 4px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* 確保送出按鈕是可以被點擊的 */
+.submit-button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  display: block;
+  margin: 20px auto;
+  width: 100%;
+}
+/*# sourceMappingURL=style.css.map */
