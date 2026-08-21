@@ -40,6 +40,29 @@ button {
 .mob {
     display: none !important;
 }
+.fixed_area{
+    position: fixed;
+    bottom: 100px;
+    right: 32px;
+    z-index: 1000;
+    // transform: translateY(-50%);
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li{
+            width: 40px;
+            height: 40px;
+            transition: all .3s ease;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+}
 
 .page-sections {
     width: 100%;
