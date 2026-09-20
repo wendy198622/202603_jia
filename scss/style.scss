@@ -919,3 +919,18 @@ button {
         padding: 12px;
     }
 }
+
+
+.youtube-short {
+    width: 100vw !important;
+    height: 100vh !important;
+    aspect-ratio: 9 / 16;
+    margin: 0 auto;
+}
+
+.youtube-short iframe {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    border: 0;
+}
